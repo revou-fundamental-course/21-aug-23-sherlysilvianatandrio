@@ -1,0 +1,388 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    font-size: 1.25vw;
+}
+
+@media all and (max-width: 480px) {
+    :root {
+        font-size: 2.5vw;
+    }
+}
+
+nav {
+    width: 100% - 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border: 0.1em solid black;
+
+    .logo-revou {
+        margin-left: 5rem;
+        width: 4rem;
+        aspect-ratio: 1;
+        border-radius: 100%;
+        background-image: url('../pict/revou.png');
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .menu-bar {
+        margin-right: 5rem;
+        width: 50%;
+    }
+
+    .menu-bar ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .menu-bar ul li {
+        list-style-type: none;
+        border: 1px solid black;
+        width: 25%;
+        padding: 0.5rem 1rem 0.5rem 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .menu-bar ul li :hover {
+        transform: scale(1.1);
+    }
+
+    .menu-bar ul li a {
+        text-decoration: none;
+        font-size: 1em;
+        color: black;
+    }
+
+    @media all and (max-width: 480px) {
+        .logo-revou {
+            margin-left: 0.1rem;
+        }
+
+        .menu-bar {
+            margin-right: 0.1rem;
+            width: 80%;
+        }
+
+        .menu-bar ul li {
+            width: 100%;
+        }
+    }
+
+}
+
+main {
+    width: 100%;
+    margin-bottom: 3rem;
+
+    .welcome-message {
+        width: 100% - 2rem;
+        padding: 2rem 0 0 5rem;
+    }
+    
+    .welcome-message h1 {
+        font-weight: 300;
+    }
+
+    .welcome-message h2 {
+        font-weight: 200;
+        font-size: medium;
+        padding-top: 0.5em;
+    }
+
+    .img-container {
+        position: relative;
+        width: 100%;
+        height: 578px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 3rem;
+        overflow: hidden;
+        padding: 0;
+    }
+
+    #img-inside {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        left: 0%;
+        transition: linear 1s;
+    }
+
+    #img-inside img {
+        width: 100%;
+    }
+    
+    .button-container {
+        margin-left: 2rem;
+        margin-top: 2rem;
+    }
+
+    .button-container button {
+        padding: 0.3rem 2rem 0.3rem 2rem;
+        margin-right: 2rem;
+        cursor: pointer;
+        background-color: transparent;
+        border: 0.1em solid black;
+    }
+
+    #prev:hover, #next:hover {
+        transform: scale(1.1);
+    }
+
+    @media all and (max-width: 480px) {
+        .main{
+            margin-bottom: 0rem;
+        }
+
+        .img-container {
+            margin-top: 0rem;
+            height: 300px;
+        }
+
+        .button-container {
+            margin-top:  0rem;
+        }
+
+        .welcome-message {
+            padding: 2rem 0 0 2rem;
+        }
+    }
+
+}
+
+.facility {
+    border: 0.1em solid black;
+    width: 100%;
+    padding-bottom: 2rem;
+
+    > h1 {
+        padding: 2rem 0 0 5rem;
+    }
+
+    .profile-container {
+        display: flex;
+        align-items: center;
+        margin-top: 2rem;
+        margin-left: 5rem;
+        gap: 2rem; 
+    }
+    
+    .profile {
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .profile > div {
+        width: 50%;
+        aspect-ratio: 1;
+        border-radius: 100%;
+        margin-bottom: 1rem;
+        overflow: hidden;
+        border: 1px solid black;
+    }
+
+    .profile > div img {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .profile > h1 {
+        font-size: large;
+        font-weight: 200;
+    }
+
+    @media all and (max-width: 480px) {
+        .profile > h1 {
+            font-size: 1.2rem;
+        }
+
+        .profile {
+            width: 30%;
+        }
+
+        .profile-container {
+            margin-left: 0;
+        }
+    }
+}
+
+textarea {
+    resize: none;
+    width: 60%;
+}
+
+.form {
+    width: 100%;
+
+    > div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    > h1 {
+        margin: 2rem 0 2rem 5rem;
+    }
+
+    #formulir {
+        width: 50%;
+        padding: 3rem;
+
+        > div {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 0.5rem;
+        }
+
+        #nama, #date {
+            width: 60%;
+            height: 2rem;
+        }
+
+        .pesan-container {
+            align-items: start;
+        }
+
+        .jenis-kelamin-container > div {
+            width: 60%;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .button-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .button-container button {
+            width: 100%;
+            padding: 0.5rem 0 0.5rem 0;
+            margin-top: 0.3rem;
+            cursor: pointer;
+        }
+
+        @media all and (max-width: 480px) {
+            #formulir {
+                width: 100%;
+                padding: 0rem;
+            }
+        }
+    }
+    
+    #output-form {
+        width: 50%;
+        min-height: 10rem;
+        padding: 5rem 3rem 5rem 3rem;
+        border: 1px solid black;
+        margin-left: 2rem;
+    }
+
+    #output-text {
+        font-size: medium;
+    }
+
+    @media all and (max-width: 480px){
+        > div {
+            flex-direction: column;
+        }
+    }
+}
+
+footer {
+    margin-top: 4rem;
+    padding: 2rem;
+    border: 0.1em solid black;
+
+    > h1 {
+        font-size: large;
+        text-align: right;
+    }
+}
+
+/* profile  */
+
+.profile-page-body {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    aspect-ratio: 2/1;
+
+    > img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.about-school {
+    margin-top: 4rem;
+    padding-left: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+
+    .about-school-container {
+        width: 80%;
+        > h1 {
+            font-weight: 400;
+        }
+    
+        > p {   
+            margin-top: 1rem;
+            text-align: justify;
+        }   
+    }
+
+    @media all and (max-width: 480px) {
+        padding-left: 0;
+    }
+}
+
+.vision-mission {
+    margin-top: 5rem;
+    padding-left: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    
+    .vision-mission-container {
+        width: 80%;
+        > h1 {
+            font-weight: 400;
+        }
+    
+        > ul {   
+            margin-top: 1rem;
+            text-align: justify;
+        }   
+
+    }
+
+    @media all and (max-width: 480px){
+        padding-left: 0;
+    }
+}
